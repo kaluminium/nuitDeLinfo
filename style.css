@@ -153,10 +153,13 @@ main{
 
 @media (max-width: 700px) {
     header{
-        padding-bottom: 10em;
-        background-color: red;
+        padding-bottom: 2.5em;
     }
 
-    
+    #menu{
+        font-size: 3em;
+    }
+
+
 }
 
