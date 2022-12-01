@@ -2,8 +2,7 @@ body{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: #FDF6F0;
-    
+    background-color: #FDF6F0;  
 }
 
 header{
@@ -29,8 +28,6 @@ nav {
     cursor: pointer;
 }
 
-
-
 #hamburger {
     display: block;
     height: 26px;
@@ -43,7 +40,6 @@ nav {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 #nav-container .line {
     display: block;
@@ -68,10 +64,6 @@ nav {
     transition: transform 0.4s ease-in-out;
 }
 
-#nav-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-}
-
 #nav-container input[type="checkbox"]:checked ~ #hamburger .line1 {
     transform: rotate(45deg);
 }
@@ -87,7 +79,27 @@ nav {
 #nav-container input[type="checkbox"]:checked ~ {
     display: none;
 }
-  
+
+#menu{
+    position: absolute;
+    top: 0px;
+    left: -500px;
+    transition: transform 0.4s ease-in-out;
+    font-size: 60px;
+    background: rgba(255, 226, 226, 0.75);
+    list-style-type: none;
+    padding-right: 1em;
+    height: 100vh;
+}
+
+#menu ul li{
+    list-style-type: none;
+    padding: .6em;
+}
+
+#nav-container input[type="checkbox"]:checked ~ #menu {
+    transform: translateX(500px);
+}
 
 #checkbox{
     display: none;
@@ -97,7 +109,6 @@ main{
     padding: 1rem;
 }
 
-
 #citron
 {
     background-image: url('img/citron.png');
@@ -105,10 +116,9 @@ main{
     width: 4rem;
 }
 
-
 #citron:hover
 {
     background-image: url('img/citron_ombragé.png');
 }
 
-button:click 
+
