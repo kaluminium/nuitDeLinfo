@@ -18,6 +18,11 @@ nav {
     padding-right: 2rem;
 }
 
+nav button{
+    border-width: 0;
+    background-color: #FFE2E2;
+}
+
 
 main{
     padding: 1rem;
