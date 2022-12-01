@@ -26,7 +26,7 @@ main{
 
 #citron
 {
-    background-image: url('citron.png');
+    background-image: url('img/citron.png');
     height: 4rem;
     width: 4rem;
 }
@@ -34,5 +34,5 @@ main{
 
 #citron:hover
 {
-    background-image: url('citron_ombragé.png');
+    background-image: url('img/citron_ombragé.png');
 }
