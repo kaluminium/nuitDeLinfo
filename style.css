@@ -83,7 +83,7 @@ nav {
 #menu{
     position: absolute;
     top: 0px;
-    left: -500px;
+    left: -550px;
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
     background: rgba(255, 226, 226, 0.75);
@@ -98,7 +98,7 @@ nav {
 }
 
 #nav-container input[type="checkbox"]:checked ~ #menu {
-    transform: translateX(500px);
+    transform: translateX(550px);
 }
 
 #checkbox{
@@ -121,4 +121,11 @@ main{
     background-image: url('img/citron_ombragé.png');
 }
 
+
+@media (max-width: 700px) {
+    header{
+        height: 50px;
+        border-color: red;
+    }
+}
 
