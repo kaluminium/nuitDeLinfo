@@ -150,15 +150,13 @@ main{
     background-image: url('img/citron_ombragé.png');
 }
 
-<<<<<<< HEAD
-button:click 
-=======
->>>>>>> 91f7aca272a62828e4ba3211e6c3b4f9b64fdbc6
 
 @media (max-width: 700px) {
     header{
-        height: 50px;
-        border-color: red;
+        padding-bottom: 10em;
+        background-color: red;
     }
+
+    
 }
 
