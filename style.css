@@ -2,12 +2,13 @@ body{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: 0E5E6F;
+    background-color: #FDF6F0;
+    
 }
 
 header{
 
-    background-color: beige;
+    background-color: #FCD8D4;
 }
 
 nav {
