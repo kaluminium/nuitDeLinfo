@@ -5,9 +5,7 @@
 //     //default behavior : refresh la page
 // } )
 
-let somme = 0;
-let truc = document.querySelectorAll('input[type=checkbox]');
-console.log(truc);
+//6 troncs
 
 for (let i = 1; i <= 6; i++) {
     document.querySelectorAll('input[type=checkbox]')[i].addEventListener('change', ($event) => {
@@ -21,4 +19,7 @@ for (let i = 1; i <= 6; i++) {
     }
 })}
 
-
+//apparition du form
+let truc = document.querySelectorAll('.apparition1');
+console.log(truc);
+truc.style.display = 'none';

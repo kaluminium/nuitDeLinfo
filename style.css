@@ -234,11 +234,7 @@ nav {
 #menu{
     position: absolute;
     top: 0px;
-<<<<<<< HEAD
-    left: -600px;
-=======
     left: -1000px;
->>>>>>> e8c6424b8301f6d60fbcc690cc5bf323a593b6c6
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
     background: rgba(255, 226, 226, 0.90);
