@@ -12,7 +12,7 @@ let questions = [
     },
     {
         id : 2,
-        question : "C’est risqué d’avoir un rapport sexuelles avec une personne qui a le VIH ?", 
+        question : "C’est risqué d’avoir un rapport sexuel avec une personne qui a le VIH ?", 
         answer : 1,
         answers : [
             "Oui, il faut éviter à tout prix", 
@@ -35,7 +35,7 @@ let questions = [
         question : "Le VIH se transmet aussi par le sang.", 
         answer : 1,
         answers : [
-            "C’est impossible, sauf si les groupes sanguins  sont les mêmes", 
+            "C’est impossible, sauf si les groupes sanguins sont les mêmes", 
             "C’est possible en cas de coupure ou de réutilisation de seringues."
         ],
         def : ""
