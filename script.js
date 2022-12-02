@@ -319,7 +319,7 @@ function answerTrue() {
     body.getElementsByClassName('card')[0].style.transition = '2s';
     body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     setTimeout(function(){
-        body.getElementsByClassName('case')[1].style.boxShadow = null;
+        body.getElementsByClassName('case')[1].removeAttribute('style');
     }, 2000);
     refreshQuestion();
     score();
