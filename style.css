@@ -295,6 +295,16 @@ a{
     background-image: url('img/citron_ombragé.png');
 }
 
+#citron:hover::after{
+    position: absolute;
+    content: "Six Troncs et le refus des Pim's Citron";
+    font-weight: bold;
+    top: 70px;
+    -webkit-text-stroke: #0e2431 0.25px;
+    color: rgb(252, 239, 76);
+    
+ 
+}
 
 @media (max-width: 700px) {
     header{
