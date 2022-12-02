@@ -5,6 +5,54 @@ body{
     background-color: #FDF6F0;  
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: helvetica;
+    font-weight: bold;
+}
+
+#board, #title{
+    margin: 2em 20em 0.1em 20em;
+    background-color:#fff0bc;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border : 0.5px solid black;
+}
+
+input, select, textarea{
+    border-radius: 0.2em;
+}
+
+.survey{
+    border-radius: 1em;
+    background-color: #fefee0;
+    margin: 1em;    
+    border: 0.5px solid black;
+}
+
+#title{
+    font-size:1.5em;
+    text-align: center;
+}
+
+
+#tickbox{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.survey{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
 header{
     background-color: #FFE2E2;
 }
@@ -13,6 +61,7 @@ header{
     grid-template-columns: 1fr 2fr 1fr;
     }
     
+
 .case {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -171,4 +220,5 @@ a{
 
 
 }
+
 
