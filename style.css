@@ -1,10 +1,63 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./helveticaBold.ttf');
+}
+
 body{
     height: 100vh;
     width: 100vw;
     margin: 0;
     background-color: #FDF6F0;  
     user-select: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica';
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: helvetica;
+    font-weight: bold;
+}
+
+#board, #title{
+    margin: 2em 20em 0.1em 20em;
+    background-color:#fff0bc;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border : 0.5px solid black;
+}
+
+input, select, textarea{
+    border-radius: 0.2em;
+}
+
+.survey{
+    border-radius: 1em;
+    background-color: #fefee0;
+    margin: 1em;    
+    border: 0.5px solid black;
+}
+
+#title{
+    font-size:1.5em;
+    text-align: center;
+}
+
+
+#tickbox{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.survey{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -16,9 +69,6 @@ footer{
     height: 200px;
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
 }
 
 footer a {
@@ -33,6 +83,7 @@ footer a {
     grid-template-columns: 1fr 2fr 1fr;
 }
     
+
 .case {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -52,6 +103,15 @@ footer a {
     margin-top: 5rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.reponse p{
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
 }
 
 .card {
@@ -63,15 +123,17 @@ footer a {
     border-radius: 1rem;
     border: 0.6rem rgba(0, 0, 0, 0.25) solid;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    background-color: rgb(95, 133, 219);
+    background-color: #fff0bc;
     
 }
 
 .incard{
+    font-size: 1.3rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .resultat{
+    font-size: 1.1rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -92,8 +154,9 @@ footer a {
 }
 
 .reponse {
+    background-color: #fefee0;
     grid-column: span 3;
-    height: 8rem;
+    height: 6rem;
     border-radius: 1rem ;
     border: 0.01rem solid grey;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
@@ -246,4 +309,5 @@ a{
 
 
 }
+
 
