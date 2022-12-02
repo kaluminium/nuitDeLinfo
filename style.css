@@ -4,6 +4,7 @@ body{
     margin: 0;
     background-color: #FDF6F0;  
     user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -68,7 +69,7 @@ nav {
     position: absolute;
     display: block;
     height: 100px;
-    width: 200px;
+    width: 33vw;
     top: 20px;
     left: 20px;
     z-index: 5;
@@ -137,6 +138,7 @@ nav {
     list-style-type: none;
     padding-right: 1em;
     height: 100vh;
+    border-radius: 10%;
 }
 
 #menu ul li{
@@ -164,7 +166,6 @@ a{
     text-decoration: none;
     color:rgb(95, 133, 219);
     font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #nav-container{
