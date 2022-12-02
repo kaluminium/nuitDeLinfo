@@ -214,7 +214,7 @@ function answerTrue() {
     body.getElementsByClassName('card')[0].style.transition = '2s';
     body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     setTimeout(function(){
-        body.getElementsByClassName('case')[1].removeAttribute('style')
+        body.getElementsByClassName('case')[1].style.boxShadow = null;
     }, 2000);
     refreshQuestion();
     score();
@@ -232,7 +232,7 @@ function answerFalse() {
     body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     body.getElementsByClassName('card')[0].style.transition = '2s';
     setTimeout(function(){
-        body.getElementsByClassName('case')[0].removeAttribute('style')
+        body.getElementsByClassName('case')[0].style.boxShadow = null;
     }, 2000);
     refreshQuestion();
     score();
@@ -244,21 +244,31 @@ function getPos(e){
     return {x, y};
 }
 
+function elementPosition (a) {
+    var b = a.getBoundingClientRect();
+    return {
+      clientX: a.offsetLeft+b.width/2,
+      clientY: a.offsetTop,
+      viewportX: (b.x || b.left),
+      viewportY: (b.y || b.top)
+    }
+}
+
 body.getElementsByClassName('card')[0].onmousedown = function(){
     click = true;
     body.onmousemove = function(e){
         body.getElementsByClassName('card')[0].style.transition = '0s';
         var pos = getPos(e);
-        if(click && game == true){
+        if(game == true && click == true){
             body.getElementsByClassName('card')[0].style.left = pos.x - body.getElementsByClassName('card')[0].offsetWidth/2 + 'px';
             body.getElementsByClassName('card')[0].style.top = pos.y - body.getElementsByClassName('card')[0].offsetHeight/2+ 'px';
-            if(pos.x > largeur - 200) {
-                click = false;
-                return answerTrue();
-            }
-            else if(pos.x < 200) {
-                click = false;
-                return answerFalse();
+            body.getElementsByClassName('case')[1].style.transition = '0.5s';
+            body.getElementsByClassName('case')[0].style.transition = '0.5s';
+            if(pos.x > largeur - 250) body.getElementsByClassName('case')[1].style.backgroundColor = 'rgba(100,100,100 ,0.1)';
+            else if(pos.x < 250) body.getElementsByClassName('case')[0].style. backgroundColor = 'rgba(100,100,100, 0.1)';
+            else {
+                body.getElementsByClassName('case')[0].style.backgroundColor = null;
+                body.getElementsByClassName('case')[1].style.backgroundColor = null;
             }
         }
     }
@@ -267,6 +277,16 @@ body.getElementsByClassName('card')[0].onmousedown = function(){
 body.getElementsByClassName('card')[0].onmouseup = function(){
     click = false;
     body.getElementsByClassName('card')[0].style.transition = '2s';
+    let pos = elementPosition(body.getElementsByClassName('card')[0]);
+    console.log(pos.clientX);
+    if(pos.clientX > largeur - 250) {
+        click = false;
+        return answerTrue();
+    }
+    else if(pos.clientX < 250) {
+        click = false;
+        return answerFalse();
+    }
     reSize();
 }
 
