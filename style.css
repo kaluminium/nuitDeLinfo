@@ -105,6 +105,7 @@ footer a {
 }
 
 .reponse {
+    background-color: #fefee0;
     grid-column: span 3;
     height: 6rem;
     border-radius: 1rem ;
