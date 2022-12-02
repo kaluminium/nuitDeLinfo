@@ -162,6 +162,11 @@ footer a {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
 }
 
+#legale{
+font-size: 1rem;  
+text-decoration: underline;  
+
+}
 
 nav {
     display: grid;
