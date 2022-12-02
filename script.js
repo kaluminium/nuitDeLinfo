@@ -12,7 +12,7 @@ let questions = [
     },
     {
         id : 2,
-        question : "C’est risqué d’avoir un rapport sexuel avec une personne qui a le VIH ?", 
+        question : "C’est risqué d’avoir un rapport sexuelles avec une personne qui a le VIH ?", 
         answer : 1,
         answers : [
             "Oui, il faut éviter à tout prix", 
@@ -35,7 +35,7 @@ let questions = [
         question : "Le VIH se transmet aussi par le sang.", 
         answer : 1,
         answers : [
-            "C’est impossible, sauf si les groupes sanguins sont les mêmes", 
+            "C’est impossible, sauf si les groupes sanguins  sont les mêmes", 
             "C’est possible en cas de coupure ou de réutilisation de seringues."
         ],
         def : ""
@@ -197,6 +197,15 @@ function refreshQuestion(){
     reSize();
 };
 
+function firstQuestion(){
+    question = questions[0];
+    questions.splice(0, 1);
+    body.getElementsByClassName('incard')[0].innerHTML = question.question;
+    body.getElementsByClassName('case')[0].querySelector('p').innerHTML = question.answers[0];
+    body.getElementsByClassName('case')[1].querySelector('p').innerHTML = question.answers[1];
+    reSize();
+};
+
 function score(){
     body.getElementsByClassName('question')[0].innerHTML = 'Question : ' + question.id + ' / ' + questionsLength;
     body.getElementsByClassName('score')[0].innerHTML = 'Score : ✓ ' + rightAnswer + ' / ⛌ ' + wrongAnswer;
@@ -301,5 +310,5 @@ onresize = function(){
     reSize();
 }
 
-refreshQuestion();
+firstQuestion();
 score();
