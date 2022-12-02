@@ -1,10 +1,15 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./helveticaBold.ttf');
+}
+
 body{
     height: 100vh;
     width: 100vw;
     margin: 0;
     background-color: #FDF6F0;  
     user-select: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica';
 }
 
 header{
@@ -49,6 +54,15 @@ footer a {
     margin-top: 5rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.reponse p{
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
 }
 
 .card {
@@ -65,10 +79,12 @@ footer a {
 }
 
 .incard{
+    font-size: 1.3rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .resultat{
+    font-size: 1.1rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -90,7 +106,7 @@ footer a {
 
 .reponse {
     grid-column: span 3;
-    height: 8rem;
+    height: 6rem;
     border-radius: 1rem ;
     border: 0.01rem solid grey;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
