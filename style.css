@@ -11,6 +11,12 @@ header{
     background-color: #FFE2E2;
 }
 
+footer{
+    background-color: #FFE2E2;
+    height: 200px;
+    font-size: small;
+}
+
 .reponsecase {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
