@@ -20,6 +20,9 @@ for (let i = 1; i <= 6; i++) {
 })}
 
 //apparition du form
-let truc = document.querySelectorAll('.apparition1');
-console.log(truc);
-truc.style.display = 'none';
+// let truc = document.querySelectorAll("#a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #a10, #a11, #a12");
+// console.log(truc);
+// for(let i = 2; i <= 12; i++){
+//     console.log(truc[i]);
+//     truc[i].style.display = "none";
+// }
