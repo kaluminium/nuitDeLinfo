@@ -21,6 +21,13 @@ main{
     font-weight: bold;
 }
 
+footer p{
+    margin: 0;
+    text-align: right;
+    font-size: small;
+    opacity: 70%;
+}
+
 #board, #title{
     margin: 2em 20em 0.1em 20em;
     background-color:#fff0bc;
@@ -62,20 +69,6 @@ input, select, textarea{
 
 header{
     background-color: #FFE2E2;
-}
-
-footer{
-    background-color: #FFE2E2;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer a {
-    font-size: 20px;
-    bottom: 10px;
-    align-self: center;
-    justify-self: center;
 }
 
 .reponsecase {
@@ -241,7 +234,11 @@ nav {
 #menu{
     position: absolute;
     top: 0px;
+<<<<<<< HEAD
     left: -600px;
+=======
+    left: -1000px;
+>>>>>>> e8c6424b8301f6d60fbcc690cc5bf323a593b6c6
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
     background: rgba(255, 226, 226, 0.90);
@@ -257,7 +254,7 @@ nav {
 }
 
 #nav-container input[type="checkbox"]:checked ~ #menu {
-    transform: translateX(600px);
+    transform: translateX(1000px);
 }
 
 #checkbox{
@@ -302,6 +299,16 @@ a{
     background-image: url('img/citron_ombragé.png');
 }
 
+#citron:hover::after{
+    position: absolute;
+    content: "Six Troncs et le refus des Pim's Citron";
+    font-weight: bold;
+    top: 70px;
+    -webkit-text-stroke: #0e2431 0.25px;
+    color: rgb(252, 239, 76);
+    
+ 
+}
 
 @media (max-width: 700px) {
     header{
