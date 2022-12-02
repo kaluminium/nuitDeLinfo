@@ -14,10 +14,15 @@ header{
 footer{
     background-color: #FFE2E2;
     height: 200px;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a {
     font-size: 20px;
+    bottom: 10px;
+    align-self: center;
+    justify-self: center;
 }
 
 .reponsecase {
