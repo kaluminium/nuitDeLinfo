@@ -234,7 +234,7 @@ nav {
 #menu{
     position: absolute;
     top: 0px;
-    left: -550px;
+    left: -1000px;
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
     background: rgba(255, 226, 226, 0.90);
@@ -250,7 +250,7 @@ nav {
 }
 
 #nav-container input[type="checkbox"]:checked ~ #menu {
-    transform: translateX(550px);
+    transform: translateX(1000px);
 }
 
 #checkbox{
