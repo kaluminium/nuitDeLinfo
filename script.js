@@ -191,8 +191,8 @@ function refreshQuestion(){
     questions.splice(0, 1);
     setTimeout(function(){
         body.getElementsByClassName('incard')[0].innerHTML = question.question;
-        body.getElementsByClassName('case')[0].innerHTML = question.answers[0];
-        body.getElementsByClassName('case')[1].innerHTML = question.answers[1];
+        body.getElementsByClassName('case')[0].querySelector('p').innerHTML = question.answers[0];
+        body.getElementsByClassName('case')[1].querySelector('p').innerHTML = question.answers[1];
     }, 1500);
     reSize();
 };
@@ -251,12 +251,10 @@ body.getElementsByClassName('card')[0].onmousedown = function(){
             body.getElementsByClassName('card')[0].style.left = pos.x - body.getElementsByClassName('card')[0].offsetWidth/2 + 'px';
             body.getElementsByClassName('card')[0].style.top = pos.y - body.getElementsByClassName('card')[0].offsetHeight/2+ 'px';
             if(pos.x > largeur - 200) {
-                console.log('oui');
                 click = false;
                 return answerTrue();
             }
             else if(pos.x < 200) {
-                console.log('non');
                 click = false;
                 return answerFalse();
             }
@@ -279,7 +277,6 @@ function reSize(){
 
 onresize = function(){
     reSize();
-    console.log(largeur);
 }
 
 refreshQuestion();

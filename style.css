@@ -11,6 +11,20 @@ header{
     background-color: #FFE2E2;
 }
 
+footer{
+    background-color: #FFE2E2;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    font-size: 20px;
+    bottom: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
 .reponsecase {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -30,8 +44,15 @@ header{
     grid-column-start: 3;
 }
 
+.case p{
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .card {
-    position: fixed;
+    position: absolute;
     padding-left: 1rem;
     padding-right: 1rem;
     width: 15rem;
@@ -42,13 +63,31 @@ header{
     background-color: rgb(95, 133, 219);
     
 }
+
+.incard{
+    text-align: center;
+    margin-top: 2rem;
+}
 .resultat{
-    width: 18rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 5rem;
     border-radius: 1rem ;
     border: 0.01rem solid grey;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
 }
+
+.resultat div{
+    text-align: center;
+}
+
+.resultat div:first-child{
+    margin-top: 1.2rem;
+    vertical-align: center;
+}
+
 .reponse {
     grid-column: span 3;
     height: 8rem;
