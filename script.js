@@ -169,9 +169,100 @@ let questions = [
             "Un traitement contre le VIH qui associe trois molécules. "
         ],
         def : "Traitement Post-Exposition (TPE) ou Prophylaxie Post-Exposition (PPE - PEP en anglais). Il peut être prescrit dans les cas d'AES soit lors d'un accident d'exposition sexuelle ou d'exposition sanguine. Il doit être commencé le plus tôt possible, de préférence moins de 4 heures et au plus tard dans les 48 heures, après un risque de transmission du VIH. Ce traitement dure 28 jours. Il est très efficace dès lors qu'il est pris correctement pendant toute sa durée."
-    }
+    },
+    {
+        id : 18,
+        question : "Plus lourd que l'humour de Jean Marie Bigard", 
+        answer : 1,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "et encore on est pas sûr"
+    },
+    {
+        id : 19,
+        question : "Meilleur goût de Pim's", 
+        answer : 0,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "haha tu l'avais celle là"
+    },
+    {
+        id : 20,
+        question : "Elément de base d'un meuble Ikea", 
+        answer : 1,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "I I I I I I K E A (très technique)"
+    },
+    {
+        id : 21,
+        question : "Peut nourrir une famille de castor", 
+        answer : 0,
+        answers : [
+            "citrons", 
+            "6 troncs"
+        ],
+        def : "Bah non ! Les castors ne mangent pas d'arbre !"
+    },
+    {
+        id : 22,
+        question : "Joue mieux au foot que Neymar", 
+        answer : 0,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "On voulait mettre un parpaing mais on a pas trouvé de photo"
+    },
+    {
+        id : 23,
+        question : "Est un multiple de 3", 
+        answer : 1,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "2 * 3 = 6 bien joué"
+    },
+    {
+        id : 24,
+        question : "Peut faire un goût de sirop", 
+        answer : 1,
+        answers : [
+            "citron", 
+            "6 troncs"
+        ],
+        def : "Bah on parlait du sirop d'érable"
+    },
+    {
+        id : 25,
+        question : "Quel est le nom de notre équipe ?", 
+        answer : 1,
+        answers : [
+            "6 troncs", 
+            "Les Citrons"
+        ],
+        def : "Et pas les 6 troncs !"
+    },
+    {
+        id : 26,
+        question : "Veux-tu recommencer ?", 
+        answer : 1,
+        answers : [
+            "Non", 
+            "Oui"
+        ],
+        def : ""
+    },
 ];
 
+let newQuestions = questions;
 let rightAnswer = 0;
 let wrongAnswer = 0;
 let questionsLength = questions.length;
@@ -211,8 +302,13 @@ function score(){
     body.getElementsByClassName('score')[0].innerHTML = 'Score : ✓ ' + rightAnswer + ' / ⛌ ' + wrongAnswer;
 }
 
+function restart(){
+    location.reload();
+}
+
 function answerTrue() {
-    if (question.answer == 1) {
+    if(question.answer == 1 && questions.length == 0) return restart();
+    else if (question.answer == 1) {
         rightAnswer++;
         body.getElementsByClassName('case')[1].style.boxShadow = 'rgba(0, 255, 26, 0.25) 0px 30px 60px -12px inset, rgba(9, 255, 0, 0.3) 0px 18px 36px -18px inset';
     }
@@ -273,8 +369,20 @@ body.getElementsByClassName('card')[0].onmousedown = function(){
             body.getElementsByClassName('card')[0].style.top = pos.y - body.getElementsByClassName('card')[0].offsetHeight/2+ 'px';
             body.getElementsByClassName('case')[1].style.transition = '0.5s';
             body.getElementsByClassName('case')[0].style.transition = '0.5s';
-            if(pos.x > largeur - 250) body.getElementsByClassName('case')[1].style.backgroundColor = 'rgba(100,100,100 ,0.1)';
-            else if(pos.x < 250) body.getElementsByClassName('case')[0].style. backgroundColor = 'rgba(100,100,100, 0.1)';
+            if(pos.x > largeur - 250) {
+                body.getElementsByClassName('card')[0].style.transition = '0.5s';
+                body.getElementsByClassName('case')[1].style.backgroundColor = 'rgba(100,100,100 ,0.1)';
+                body.getElementsByClassName('card')[0].style.transform = 'rotate('+15+'deg)';
+            }
+            else if(pos.x < 250) {
+                body.getElementsByClassName('card')[0].style.transition = '0.5s';
+                body.getElementsByClassName('case')[0].style.backgroundColor = 'rgba(100,100,100, 0.1)';
+                body.getElementsByClassName('card')[0].style.transform = 'rotate('+-15+'deg)';
+            }
+            else if(body.getElementsByClassName('card')[0].style.transform == 'rotate('+15+'deg)' || body.getElementsByClassName('card')[0].style.transform == 'rotate('+-15+'deg)'){
+                body.getElementsByClassName('card')[0].style.transition = '0.5s';
+                body.getElementsByClassName('card')[0].style.transform = 'rotate('+0+'deg)';
+            }
             else {
                 body.getElementsByClassName('case')[0].style.backgroundColor = null;
                 body.getElementsByClassName('case')[1].style.backgroundColor = null;
@@ -284,6 +392,7 @@ body.getElementsByClassName('card')[0].onmousedown = function(){
 }
 
 body.getElementsByClassName('card')[0].onmouseup = function(){
+    body.getElementsByClassName('card')[0].style.transform = null;
     click = false;
     body.getElementsByClassName('card')[0].style.transition = '2s';
     let pos = elementPosition(body.getElementsByClassName('card')[0]);
