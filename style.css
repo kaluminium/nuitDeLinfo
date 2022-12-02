@@ -16,7 +16,7 @@ footer{
     height: 200px;
 }
 
-footer ~{
+footer a {
     font-size: 20px;
 }
 
