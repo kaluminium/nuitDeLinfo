@@ -21,6 +21,13 @@ main{
     font-weight: bold;
 }
 
+footer p{
+    margin: 0;
+    text-align: right;
+    font-size: small;
+    opacity: 70%;
+}
+
 #board, #title{
     margin: 2em 20em 0.1em 20em;
     background-color:#fff0bc;
@@ -62,20 +69,6 @@ input, select, textarea{
 
 header{
     background-color: #FFE2E2;
-}
-
-footer{
-    background-color: #FFE2E2;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer a {
-    font-size: 20px;
-    bottom: 10px;
-    align-self: center;
-    justify-self: center;
 }
 
 .reponsecase {
