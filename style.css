@@ -14,7 +14,10 @@ header{
 footer{
     background-color: #FFE2E2;
     height: 200px;
-    font-size: small;
+}
+
+footer ~{
+    font-size: 20px;
 }
 
 .reponsecase {
@@ -48,6 +51,7 @@ footer{
     background-color: rgb(95, 133, 219);
     
 }
+
 .resultat{
     width: 18rem;
     height: 5rem;
@@ -55,6 +59,7 @@ footer{
     border: 0.01rem solid grey;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
 }
+
 .reponse {
     grid-column: span 3;
     height: 8rem;
