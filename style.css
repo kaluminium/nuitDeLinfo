@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./helveticaBold.ttf');
+}
+
 body{
     height: 100vh;
     width: 100vw;
     margin: 0;
     background-color: #FDF6F0;  
+    user-select: none;
+    font-family: 'Helvetica';
 }
 
 main{
@@ -56,10 +63,25 @@ input, select, textarea{
 header{
     background-color: #FFE2E2;
 }
+
+footer{
+    background-color: #FFE2E2;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    font-size: 20px;
+    bottom: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
 .reponsecase {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    }
+}
     
 
 .case {
@@ -68,28 +90,82 @@ header{
     margin: 2rem;
     width: 18rem;
     height: 30rem;
-    border-radius: 3%;
+    border-radius: 1rem;
     box-shadow: rgba(164, 129, 129, 0.25) 0px 30px 60px -12px inset, rgba(247, 132, 132, 0.3) 0px 18px 36px -18px inset;
 }
+
 #case2{
     grid-column-start: 3;
 }
+
+.case p{
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.reponse p{
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
 .card {
+    position: absolute;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 2rem;
     width: 15rem;
     height: 25rem;
-    border-radius: 3%;
+    border-radius: 1rem;
     border: 0.6rem rgba(0, 0, 0, 0.25) solid;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    background-color: rgb(95, 133, 219);
+    background-color: #fff0bc;
     
 }
 
+.incard{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+.resultat{
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    border-radius: 1rem ;
+    border: 0.01rem solid grey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
+}
+
+.resultat div{
+    text-align: center;
+}
+
+.resultat div:first-child{
+    margin-top: 1.2rem;
+    vertical-align: center;
+}
+
+.reponse {
+    background-color: #fefee0;
+    grid-column: span 3;
+    height: 6rem;
+    border-radius: 1rem ;
+    border: 0.01rem solid grey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
+}
+
+
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -97,8 +173,8 @@ nav {
 #nav-container #checkbox {
     position: absolute;
     display: block;
-    height: 32px;
-    width: 32px;
+    height: 100px;
+    width: 33vw;
     top: 20px;
     left: 20px;
     z-index: 5;
@@ -110,7 +186,6 @@ nav {
     display: block;
     height: 26px;
     width: 32px;
-    position: absolute;
     top: 17px;
     left: 20px;
     z-index: 2;
@@ -164,10 +239,11 @@ nav {
     left: -550px;
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
-    background: rgba(255, 226, 226, 0.75);
+    background: rgba(255, 226, 226, 0.90);
     list-style-type: none;
     padding-right: 1em;
     height: 100vh;
+    border-radius: 0 0 10% 0;
 }
 
 #menu ul li{
@@ -187,17 +263,30 @@ main{
     padding: 1rem;
 }
 
+h1{
+    justify-self: center;
+}
+
 a{
     text-decoration: none;
-    color:rgb(95, 133, 219)
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+#nav-container{
+    align-self: center;
+    justify-self: center;
 }
 
 #jaune{
-    color: rgb(255, 221, 0);
+    color: rgb(252, 239, 76);
+    -webkit-text-stroke: #0e2431 1px;
 }
 
 #citron
 {
+    justify-self: center;
+    align-self: center;
     background-image: url('img/citron.png');
     height: 4rem;
     width: 4rem;
