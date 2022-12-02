@@ -21,6 +21,9 @@ footer{
     height: 200px;
     display: flex;
     justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
 
 footer a {
@@ -189,11 +192,11 @@ nav {
     left: -550px;
     transition: transform 0.4s ease-in-out;
     font-size: 60px;
-    background: rgba(255, 226, 226, 0.75);
+    background: rgba(255, 226, 226, 0.90);
     list-style-type: none;
     padding-right: 1em;
     height: 100vh;
-    border-radius: 10%;
+    border-radius: 0 0 10% 0;
 }
 
 #menu ul li{
@@ -219,7 +222,7 @@ h1{
 
 a{
     text-decoration: none;
-    color:rgb(95, 133, 219);
+    color:rgb(0, 0, 0);
     font-size: 50px;
 }
 
