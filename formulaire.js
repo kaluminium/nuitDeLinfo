@@ -15,10 +15,9 @@ for (let i = 1; i <= 6; i++) {
         somme += i;
     else
         somme -= i;
-    console.log(somme);
     if(somme == 21)
     {
-    alert("citron");
+        alert("citron");
     }
 })}
 
