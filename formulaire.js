@@ -6,13 +6,14 @@
 // } )
 
 //6 troncs
-
+let somme = 0;
 for (let i = 1; i <= 6; i++) {
     document.querySelectorAll('input[type=checkbox]')[i].addEventListener('change', ($event) => {
         if ($event.target.checked)
         somme += i;
     else
         somme -= i;
+    console.log(somme);
     if(somme == 21)
     {
         alert("citron");
