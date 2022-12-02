@@ -19,7 +19,7 @@ header{
     margin: 2rem;
     width: 18rem;
     height: 30rem;
-    border-radius: 3%;
+    border-radius: 1rem;
     box-shadow: rgba(164, 129, 129, 0.25) 0px 30px 60px -12px inset, rgba(247, 132, 132, 0.3) 0px 18px 36px -18px inset;
 }
 #case2{
@@ -31,12 +31,27 @@ header{
     margin: 2rem;
     width: 15rem;
     height: 25rem;
-    border-radius: 3%;
+    border-radius: 1rem;
     border: 0.6rem rgba(0, 0, 0, 0.25) solid;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     background-color: rgb(95, 133, 219);
     
 }
+.resultat{
+    width: 18rem;
+    height: 5rem;
+    border-radius: 1rem ;
+    border: 0.01rem solid grey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
+}
+.reponse {
+    grid-column: span 3;
+    height: 8rem;
+    border-radius: 1rem ;
+    border: 0.01rem solid grey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px, rgba(0, 0, 0, 0.06) 0px 5px 10px 0px;
+}
+
 
 nav {
     display: flex;
