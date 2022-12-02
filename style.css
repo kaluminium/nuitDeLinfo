@@ -3,6 +3,7 @@ body{
     width: 100vw;
     margin: 0;
     background-color: #FDF6F0;  
+    user-select: none;
 }
 
 header{
@@ -26,9 +27,9 @@ header{
     grid-column-start: 3;
 }
 .card {
+    position: fixed;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 2rem;
     width: 15rem;
     height: 25rem;
     border-radius: 3%;
@@ -149,9 +150,4 @@ main{
 {
     background-image: url('img/citron_ombragé.png');
 }
-
-<<<<<<< HEAD
-button:click 
-=======
->>>>>>> 91f7aca272a62828e4ba3211e6c3b4f9b64fdbc6
 
