@@ -8,10 +8,11 @@ body{
 header{
     background-color: #FFE2E2;
 }
+
 .reponsecase {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    }
+}
     
 .case {
     padding-left: 1rem;
@@ -22,9 +23,11 @@ header{
     border-radius: 3%;
     box-shadow: rgba(164, 129, 129, 0.25) 0px 30px 60px -12px inset, rgba(247, 132, 132, 0.3) 0px 18px 36px -18px inset;
 }
+
 #case2{
     grid-column-start: 3;
 }
+
 .card {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -39,8 +42,8 @@ header{
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -48,8 +51,8 @@ nav {
 #nav-container #checkbox {
     position: absolute;
     display: block;
-    height: 32px;
-    width: 32px;
+    height: 100px;
+    width: 200px;
     top: 20px;
     left: 20px;
     z-index: 5;
@@ -61,7 +64,6 @@ nav {
     display: block;
     height: 26px;
     width: 32px;
-    position: absolute;
     top: 17px;
     left: 20px;
     z-index: 2;
@@ -138,17 +140,31 @@ main{
     padding: 1rem;
 }
 
+h1{
+    justify-self: center;
+}
+
 a{
     text-decoration: none;
-    color:rgb(95, 133, 219)
+    color:rgb(95, 133, 219);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav-container{
+    align-self: center;
+    justify-self: center;
 }
 
 #jaune{
-    color: rgb(255, 221, 0);
+    color: rgb(252, 239, 76);
+    -webkit-text-stroke: #0e2431 1px;
 }
 
 #citron
 {
+    justify-self: center;
+    align-self: center;
     background-image: url('img/citron.png');
     height: 4rem;
     width: 4rem;
