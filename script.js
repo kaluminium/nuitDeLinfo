@@ -174,6 +174,7 @@ let questions = [
 
 let rightAnswer = 0;
 let wrongAnswer = 0;
+let questionsLength = questions.length;
 let largeur = window.innerWidth;
 let hauteur = window.innerHeight;
 let click = false;
@@ -182,7 +183,6 @@ let game = true;
 
 function refreshQuestion(){
     if(questions.length == 0){
-        alert('Fin du jeu');
         reSize();
         game = false;
         return body.getElementsByClassName('incard')[0].innerHTML = 'Fin du jeu';
@@ -198,6 +198,7 @@ function refreshQuestion(){
 };
 
 function score(){
+    body.getElementsByClassName('question')[0].innerHTML = 'Question : ' + question.id + ' / ' + questionsLength;
     body.getElementsByClassName('score')[0].innerHTML = 'Score : ' + rightAnswer + ' / ' + wrongAnswer;
 }
 
