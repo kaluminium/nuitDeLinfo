@@ -138,6 +138,15 @@ main{
     padding: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color:rgb(95, 133, 219)
+}
+
+#jaune{
+    color: rgb(255, 221, 0);
+}
+
 #citron
 {
     background-image: url('img/citron.png');
