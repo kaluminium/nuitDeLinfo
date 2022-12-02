@@ -199,7 +199,7 @@ function refreshQuestion(){
 
 function score(){
     body.getElementsByClassName('question')[0].innerHTML = 'Question : ' + question.id + ' / ' + questionsLength;
-    body.getElementsByClassName('score')[0].innerHTML = 'Score : ' + rightAnswer + ' / ' + wrongAnswer;
+    body.getElementsByClassName('score')[0].innerHTML = 'Score : ✓ ' + rightAnswer + ' / ⛌ ' + wrongAnswer;
 }
 
 function answerTrue() {
@@ -212,6 +212,7 @@ function answerTrue() {
         body.getElementsByClassName('case')[1].style.boxShadow = 'rgba(255, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(255, 0, 0, 0.3) 0px 18px 36px -18px inset';
     }
     body.getElementsByClassName('card')[0].style.transition = '2s';
+    body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     setTimeout(function(){
         body.getElementsByClassName('case')[1].removeAttribute('style')
     }, 2000);
@@ -228,6 +229,7 @@ function answerFalse() {
         wrongAnswer++;
         body.getElementsByClassName('case')[0].style.boxShadow = 'rgba(255, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(255, 0, 0, 0.3) 0px 18px 36px -18px inset';
     }
+    body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     body.getElementsByClassName('card')[0].style.transition = '2s';
     setTimeout(function(){
         body.getElementsByClassName('case')[0].removeAttribute('style')
