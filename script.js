@@ -337,7 +337,7 @@ function answerFalse() {
     body.getElementsByClassName('reponse')[0].querySelector('p').innerHTML = question.def;
     body.getElementsByClassName('card')[0].style.transition = '2s';
     setTimeout(function(){
-        body.getElementsByClassName('case')[0].style.boxShadow = null;
+        body.getElementsByClassName('case')[0].removeAttribute('style');
     }, 2000);
     refreshQuestion();
     score();
